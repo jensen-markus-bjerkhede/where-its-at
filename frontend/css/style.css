@@ -1,0 +1,74 @@
+body {
+    background-color: #ffffff;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#messageError {
+    margin: 3rem;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    padding: 0.5em;
+    min-height: 1.5em;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switchViewButton {
+    color: black;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.libraryButton {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.photoButton {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.takePictureButton:hover {
+    background-color: grey;
+    color: white;
+}
+
+.button2 {
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border: 0.5rem solid #CCCCCC;
+}
+
+.profile img {
+    width: 192px;
+    height: 192px;
+}
