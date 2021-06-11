@@ -20,42 +20,54 @@ Run the application with:
 npm run start
 ```
 
-### Register Admin
+### Example of Register Admin
 ```bash
 curl --request POST \
   --url http://localhost:3000/auth/register \
   --header 'Content-Type: application/json' \
   --data '{
-	"email": "{user@youremail.com}",
-	"role": "{admin}",
-	"password": "{password}"
+	"email": "user@youremail.com",
+	"role": "admin",
+	"password": "password"
 }'
 ```
 
-### Login Admin
+### Example of Register Staff
+```bash
+curl --request POST \
+  --url http://localhost:3000/auth/register \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"email": "worker@youremail.com",
+	"role": "staff",
+	"password": "password"
+}'
+```
+
+### Example of Login Admin
 ```bash
 curl --request POST \
   --url http://localhost:3000/auth/login \
   --header 'Content-Type: application/json' \
   --data '{
-	"email": "{user@youremail.com}",
-	"password": "{password}"
+	"email": "user@youremail.com",
+	"password": "password"
 }'
 ```
 Copy the response token and save it for later.
 
-### Create Event
+### Example of Create Event
 ```bash
 curl --request POST \
   --url http://localhost:3000/events/create \
   --header 'Authorization: Bearer {your saved response token here}' \
   --header 'Content-Type: application/json' \
   --data '{
-	"artist": "{Artist name}",
-	"place": "{Place}",
-	"date": "{ Date I.E 1995-12-17T15:24:00}",
-	"price": {195},
-	"duration": {whole hours I.E 3}
+	"artist": "The Band",
+	"place": "The Stadium",
+	"date": "2020-12-17T15:24:00",
+	"price": 999,
+	"duration": 4
 }'
 ```
 

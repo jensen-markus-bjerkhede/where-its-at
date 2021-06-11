@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { db } = require('./db');
-const  jwt  =  require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const shortid = require('shortid');
 
 const router = new Router();
@@ -26,14 +26,17 @@ router.post('/create', async (req, res) => {
   const duration = req.body.duration;
   const accessToken = req.headers['authorization'].split(' ')[1];
 
+
   jwt.verify(accessToken, SECRET_KEY, async (err, verifiedJwt) => {
-    if(!err){
+    if (!err) {
       if (verifiedJwt.permissions.some(permission => 'create_event' === permission)) {
         let event = await createEvent(artist, place, date, price, duration);
         res.status(201).send(event);
+      } else {
+        res.status(401).send('Unauthorized');
       }
     } else {
-      res.status(403).send('Unauthorized');
+      res.status(403).send('Forbidden');
     }
   });
 });
@@ -47,7 +50,6 @@ async function createEvent(artist, place, date, price, duration) {
     price: price,
     duration: duration
   }
-
   return db.get('events').push(event).write();
 }
 
