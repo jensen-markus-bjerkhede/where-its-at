@@ -1,74 +1,101 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 body {
-    background-color: #ffffff;
+	color: black;
+	font-size: 13px;
+	margin: 0;
 }
 
-.flex-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+input, textarea, button, label {
+	color: black;
+	font-size: 13px;
 }
 
-#messageError {
-    margin: 3rem;
-    font-weight: bold;
-    font-size: 1.2em;
-    background-color: #ffffff;
-    padding: 0.5em;
-    min-height: 1.5em;
+img {
+	max-width: 100%;
 }
 
-.buttonRow {
-    display: flex;
-    justify-content: space-between;
+.logo {
+    padding: 100px 0px 50px 10px;
 }
 
-.switchViewButton {
-    color: black;
-    background-color: #ddddddea;
-    display: inline-block;
-    padding: 1rem;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
+ul {
+	padding-left: 0;
+	margin-bottom: 0;
 }
 
-.libraryButton {
-    text-decoration: none;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddddddea;
-    display: inline-block;
-    padding: 1rem;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
+a:hover {
+	text-decoration: none;
 }
 
-.photoButton {
-    text-decoration: none;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddddddea;
-    display: inline-block;
-    padding: 1rem;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
+:focus {
+	outline: none;
 }
 
-.takePictureButton:hover {
-    background-color: grey;
-    color: white;
+.wrapper {
+	min-height: 100vh;
+	background-color: #F39440;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.button2 {
-    text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
-    padding: 0.4rem 1rem 0.4rem 1rem;
-    border: 0.5rem solid #CCCCCC;
+.inner {
+	 width: 500px;
+     margin: 5rem;
+    text-align: center;
+	color: #333;
 }
 
-.profile img {
-    width: 192px;
-    height: 192px;
+.form-wrapper {
+	margin-bottom: 17px;
 }
+
+.login-control {
+	border: 1px solid rgba(35, 31, 66, 1);
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 0 20px;
+	background: none;
+}
+
+.login-control:focus {
+	border: 1px solid rgba(35, 31, 66, 1);
+}
+
+button {
+	border: none;
+	width: 152px;
+	height: 40px;
+	margin: auto;
+	margin-top: 29px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background: rgba(35, 31, 66, 1);
+	font-size: 13px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+	.inner {
+	  min-width: 768px; } }
+  @media (max-width: 767px) {
+	.inner {
+	  min-width: auto;
+	  background: none;
+	  padding-top: 0;
+	  padding-bottom: 0; }
+  
+	form {
+	  width: 100%;
+	  padding-right: 15px;
+	  padding-left: 15px; } }
