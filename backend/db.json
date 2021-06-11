@@ -1,28 +1,5 @@
 {
-  "users": [
-    {
-      "email": "mathiasf@email.se",
-      "password": "$2a$10$ZFLMvomjbvZP38KoW/2U8ukulFVdDvD/FiDzMRKmDVK7XN/zI8HgO",
-      "permissions": [
-        "create_event",
-        "verify_ticket"
-      ]
-    }
-  ],
-  "events": [
-    {
-      "id": "BNKAP-9zl",
-      "artist": "Metallica",
-      "place": "Ullevi",
-      "date": "2021-06-17:19.00",
-      "price": 199
-    }
-  ],
-  "tickets": [
-    {
-      "code": "_kadRFQ95",
-      "event": "BNKAP-9zl",
-      "verified": true
-    }
-  ]
+  "users": [],
+  "events": [],
+  "tickets": []
 }

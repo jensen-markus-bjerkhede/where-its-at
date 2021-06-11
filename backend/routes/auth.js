@@ -23,7 +23,7 @@ router.post('/login', async (req, res) => {
   let user = await db
     .get('users')
     .find({ email: email })
-    .value().write();
+    .value();
 
   if (!user) {
     return res.status(404).send('User not found!');
@@ -42,7 +42,7 @@ router.post('/login', async (req, res) => {
     if(err){
       res.send(err.message)
     }else{
-      res.status(200).send({ "user":  user, "access_token":  accessToken});
+      res.status(200).send({ "access_token":  accessToken});
     }
   })
 

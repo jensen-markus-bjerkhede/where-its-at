@@ -7,6 +7,12 @@ const router = new Router();
 
 const SECRET_KEY = 'secretkey23456';
 
+router.get('/getOne', async (req, res) => {
+  const code = req.query.code;
+  let ticket = await db.get('tickets').find({ code: code }).value();
+  res.status(200).send(ticket);
+});
+
 router.put('/verify', async (req, res) => {
   const accessToken = req.headers['authorization'].split(' ')[1];
   jwt.verify(accessToken, SECRET_KEY, async (err, verifiedJwt) => {
@@ -15,7 +21,7 @@ router.put('/verify', async (req, res) => {
       if (verifiedJwt.permissions.some(permission => 'verify_ticket' === permission)) {
         let ticket = await db
           .get('tickets')
-          .find({ code: code, verified: false })
+          .find({ code, verified: false })
           .value();
         if (ticket) {
           await db.get('tickets')
@@ -30,7 +36,7 @@ router.put('/verify', async (req, res) => {
         res.status(403).send('Forbidden');
       }
     } else {
-      res.status(403).send('Unauthorized');
+      res.status(401).send('Unauthorized');
     }
   });
 
@@ -43,7 +49,6 @@ router.post('/create', async (req, res) => {
     event: req.body.event,
     verified: false
   }
-
   db.get('tickets').push(ticket).write();
   res.status(201).send(ticket);
 });
