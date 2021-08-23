@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: #231F42;
+    margin-top: 10rem;
+}
+
+.wrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+
+.artist {
+    border-bottom: solid 1px black;
+    padding: 1rem 0;
+    font-family: Sansita One;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F56B9A;
+}
+
+#event {
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+.date {
+    padding-top: 2rem;
+    color: #37AEAB;
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.place {
+    border-bottom: solid 1px black;
+    padding: 1rem 0;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.price {
+    padding-bottom: 10rem;
+    color: #FFFFFF;
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+}

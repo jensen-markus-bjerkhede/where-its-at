@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: #231F42;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist {
+    padding-top: 5rem;
+    font-family: Sansita One;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #F56B9A;
+}
+
+#event {
+    padding: 2rem;
+}
+
+.date {
+    color: #37AEAB;
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.place {
+    padding-bottom: 10rem;
+    color: #FFFFFF;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.price {
+    padding-bottom: 10rem;
+    color: #FFFFFF;
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.button {
+    background-color: #37AEAB;
+    height: 60px;
+    width: 310px;
+    left: 33px;
+    top: 573px;
+    border-radius: 3px;
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+p {
+    padding-top: 5rem;
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}

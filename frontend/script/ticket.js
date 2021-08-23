@@ -1,7 +1,7 @@
 let ticket;
 let event;
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const code = urlParams.get('ticket');
@@ -66,25 +66,23 @@ function renderEvent() {
   let section = document.getElementById('event');
 
   let artist = document.createElement('div');
+  artist.classList.add('artist')
   let artistText = document.createTextNode(event.artist);
   artist.appendChild(artistText);
 
   let date = document.createElement('div');
+  date.classList.add('date')
   let dateText = document.createTextNode(getMonthAndDate(event.date) + ' ' + getTime(event.date, event.duration));
   date.appendChild(dateText);
 
   let place = document.createElement('div');
+  place.classList.add('place')
   let placeText = document.createTextNode(event.place);
   place.appendChild(placeText);
 
-  let price = document.createElement('div');
-  let priceText = document.createTextNode(event.price + ' sek');
-  price.appendChild(priceText);
-
   section.appendChild(artist);
-  section.appendChild(date);
   section.appendChild(place);
-  section.appendChild(price);
+  section.appendChild(date);
 
   return section;
 }

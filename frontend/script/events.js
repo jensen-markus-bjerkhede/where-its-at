@@ -1,6 +1,6 @@
 let events;
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
   events = await loadEvents();
   renderEvents();
 })
@@ -35,26 +35,38 @@ function renderEvents() {
 
 function createSection(event) {
   let row = document.createElement('tr');
+  row.classList.add('table-row');
 
   let firstColumn = document.createElement('td');
+  firstColumn.classList.add('event-date');
   let dateText = document.createTextNode(getMonthAndDate(event.date));
   firstColumn.appendChild(dateText);
 
   let secondColumn = document.createElement('td');
+  secondColumn.classList.add('artist');
   let eventText = document.createTextNode(event.artist);
   secondColumn.appendChild(eventText);
 
+  let thirdColumn = document.createElement('td');
+  thirdColumn.classList.add('place');
   let locationText = document.createTextNode(event.place);
-  secondColumn.appendChild(locationText);
+  thirdColumn.appendChild(locationText);
 
+  let forthColumn = document.createElement('td');
+  forthColumn.classList.add('date');
   let timeText = document.createTextNode(getTime(event.date, event.duration));
-  secondColumn.appendChild(timeText);
+  forthColumn.appendChild(timeText);
 
-  let priceText = document.createTextNode(event.price + ' sek');
-  secondColumn.appendChild(priceText);
+  let fifthColumn = document.createElement('td')
+  fifthColumn.classList.add('price')
+  let priceText = document.createTextNode(" " + event.price + ' sek');
+  fifthColumn.appendChild(priceText);
 
   row.appendChild(firstColumn);
   row.appendChild(secondColumn);
+  row.appendChild(thirdColumn);
+  row.appendChild(forthColumn);
+  row.appendChild(fifthColumn);
 
   row.addEventListener("click", order);
   return row;
@@ -62,6 +74,6 @@ function createSection(event) {
 
 function order(event) {
   const listItem = event.target.closest('tr');
-  const eventElementList = Array.from( listItem.closest('table').children );
+  const eventElementList = Array.from(listItem.closest('table').children);
   window.location.href = `buy.html?id=${events[eventElementList.indexOf(listItem)].id}`;
 }

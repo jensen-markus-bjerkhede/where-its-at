@@ -1,0 +1,86 @@
+body {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin: 3rem auto;
+    color: #F56B9A;
+}
+
+.wrapper {
+    color: #FFFFFF;
+    background-color: #231F42;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#eventList {
+    padding: 3rem;
+}
+
+.table-row {
+    cursor: pointer;
+}
+
+.event-date {
+    margin: 5rem;
+    height: 66px;
+    width: 66px;
+    text-align: center;
+    border: solid 1px #FFFFFF;
+}
+
+.artist {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0.1rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.place {
+    display: flex;
+    flex-direction: column;
+    font-family: Fira Sans;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.date {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-family: Fira Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #37AEAB;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #FFFFFF;
+}
